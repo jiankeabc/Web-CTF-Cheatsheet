@@ -2249,6 +2249,10 @@ Server-Side Template Injection
 - 過濾Keyword
     - 用`\xff`形式去繞
     - `{{''["\x5f\x5fclass\x5f\x5f"]}}`
+    - 用连接符+形式去绕
+    - 'fl'+'ag'
+    - 用编码形式取绕
+    - '666C6167'.decode('hex')  'ZmxhZw=='.decode('base64')
 - 用request繞
     - `{{''.__class__}}`
         - `{{''[request.args.kaibro]}}&kaibro=__class__`
